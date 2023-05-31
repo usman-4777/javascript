@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js function.2 practice</title>
+  </head>
+  <body>
+    <h1>Functions</h1>
+
+    <p id="dis"></p>
+    <p id="a1"></p>
+    <p id="a2"></p>
+    <p id="a3"></p>
+    <p id="a4"></p>
+    <h1>Arrays</h1>
+
+    <p id="a7"></p>
+    <p id="a5"></p>
+    <p id="a8"></p>
+    <p id="a9"></p>
+    <p id="a10"></p>
+
+    <p id="a11"></p>
+    <p id="a12"></p>
+    <p id="a13"></p>
+    <p id="a23"></p>
+    <button type="button" onclick="myFunction()">click me</button>
+
+    <p id="a14"></p>
+    <button type="button" onclick="myName()">change me</button>
+      <p id="a15"></p>
+<input type="text">
+<button type="button" onclick="myAnimat">add data</button>
+    <p id="demo"></p>
+    <p id="a16"></p>
+
+    <p id="a17"></p>
+
+    <!-- <form id="submision" > -->
+      first:<input type="text" id="fname"> <br><br>
+      lasr:<input type="text" id = sname><br><br>
+      <button type="button" onclick="usman()">add</button>
+
+    <!-- </form> -->
+    <br>
+    <button onclick="lm()">print</button>
+    <br>
+    <button onclick="lmq('usman', 'ashraf')">print New</button>
+    <br>
+
+
+
+
+
+
+
+
+
+    <script>
+      function myLq(ps, pb) {
+        return ps * pb;
+      }
+      document.getElementById("dis").innerHTML = myLq(41, 10);
+      function za(a, b) {
+        return a + b;
+      }
+      document.getElementById("a1").innerHTML = za(50, 50);
+      document.write("<br>");
+
+      function zb(c, d) {
+        return c - d;
+      }
+      document.getElementById("a2").innerHTML = zb(800, 60);
+
+      var x = sum(140, 130);
+      document.getElementById("a3").innerHTML = x;
+      function sum(e, f) {
+        return e + f;
+      }
+
+      var y = subtraction(495, 350, 2);
+      document.getElementById("a4").innerHTML = y;
+      function subtraction(g, f, j) {
+        return g + f * j;
+      }
+      /*
+      Random Function
+      */
+      function getRandInteger(a) {
+        return Math.floor(Math.random() * (a - 0));
+      }
+      /*
+      <h1>JavaScript Strings</h1>
+        <h2>The length Property</h2>
+      */
+      let bikes = ["ab", "cd", "df", "fg"];
+      document.getElementById("a7").innerHTML = bikes;
+      document.write("<br>");
+
+      let mobile = [
+        "saim",
+        "sarim",
+        "sufyan",
+        "sarah",
+        "haseeb",
+        "umar",
+        "fazan",
+      ];
+      document.getElementById("a5").innerHTML = mobile;
+      document.write("<br>");
+
+      var shops = ["oppof5", "samsung", "vivo"];
+      document.getElementById("a8").innerHTML = shops;
+
+      var sf = ["pancil", "copy", "laptop", "lead"];
+      document.getElementById("a9").innerHTML = sf[1];
+
+      const pb = ["ichara", "joher town", "model town"];
+      pb[0] = "G1";
+      document.getElementById("a10").innerHTML = pb;
+
+      const sbd = { f: "usman", ln: "Ashraf", age: "26" };
+      document.getElementById("a11").innerHTML = sbd.ln;
+
+      var beauti = ["chair", "charger", "books", "cup"];
+      document.getElementById("a12").innerHTML = beauti.length;
+
+      var khl = ["az", "za", "ax", "aq", "aw", "ae", "ar"];
+      document.getElementById("a13").innerHTML = khl.length;
+      /*
+      fgfasdfghj
+      */
+
+      const edu = ["aq", "aw", "ae", "at", "yu", "aty"];
+      document.getElementById("a14").innerHTML = edu;
+
+      function myFunction() {
+        // var input_value = document.getElementById('')
+        edu.push("akhlaq");
+        document.getElementById("a14").innerHTML = edu;
+      }
+
+      const fruits = ["Banana", "Orange", "Apple"];
+      document.getElementById("a15").innerHTML = fruits;
+
+      function myName() {
+        fruits.push("Lemon");
+        document.getElementById("a15").innerHTML = fruits;
+      }
+
+      /*
+      push array with input field
+      */
+
+      var supers = [""];
+      document.getElementById("a16").innerHTML = supers;
+
+      function myAnimat(){
+         var input_value = document.getElementById('a16') = supers;
+        supers.push();
+
+        
+        
+      }
+       function usman() {
+          var name = document.getElementById("fname").value;
+          var name = document.getElementById("sname").value;
+          document.getElementById('a23').innerHTML = name  
+        }
+        function lm(){
+          document.write('i am frontend web developer');
+          document.write('<br>');
+          document.write('i am backend web developer');
+          document.write('<br>');
+          document.write('i am full stack  web developer');
+          document.write('<br>');
+        }
+        function lmq(fname,lname){
+          document.write('hellow' + ' '+  fname + ' ' +  lname);
+ }
+        
+      
+
+    </script>
+  </body>
+</html>

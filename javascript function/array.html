@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <h1> Array</h1>
+    <input type="text" placeholder="add element" id="input">
+    <!-- <button type="button" onclick="save()">plz add</button>  -->
+    <button class="btn btn-primary" onclick="myFunction()">Save</button>
+    <p id="demo"></p>
+    <!-- array to object -->
+    <input type="text" id="object" placeholder="obj">
+    <button onclick="add()">Add New</button>
+    <p id="a1"></p>
+    <script>
+        // let array1 = ['usman','ashraf','from','kanganpur'];
+        // document.write(array1);
+     let array = [];
+    //  console.log(array);
+
+ function myFunction(){
+    let a = document.getElementById('input').value
+     array.push(a);
+     document.getElementById('demo').innerHTML="";  
+     
+     document.getElementById('demo').innerHTML +=  + array + '<br>';
+    //  console.log(array);
+}
+
+let arr = [];
+Id = null;
+function add()
+   let obj = {
+  usman:document.getElementById('object').value,
+ }
+ </script>
+ 
+
+</body>
+</html> 

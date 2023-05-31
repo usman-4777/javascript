@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Game</title>
+</head>
+<body>
+    <div style="text-align: center;">
+    <h1>Dice With Function</h1>
+
+           <button onclick="myFunction()" id="demo"> play dice</button>
+
+    
+        <!-- <button onclick="myFunction()" id="demo" style="height:100px ; width: 100px;"> click me</button> -->
+        <div>
+        <img id="image" src="" alt="dice image" style="height: 150px; margin: 100px;">
+        </div>
+
+        
+    </div>  
+    <script>
+        function myFunction(){
+            // document.getElementById("demo").innerHTML =
+     var r = Math.floor(Math.random() * 6) + 1;
+    if(r===1){
+     document.getElementById('image').src ="dice1.png"
+    }
+    else if(r===2){
+        document.getElementById('image').src= "dice2.png"
+    }
+    else if(r===3){
+        document.getElementById('image').src= "dice3.jpeg"
+    }  else if(r===4){
+        document.getElementById('image').src= "dice4.jpeg"
+    }  else if(r===5){
+        document.getElementById('image').src= "dice5.png"
+    }  else if(r===6){
+        document.getElementById('image').src= "dice6.png"
+    }
+    // document.getElementById('myimage').getAttribute("src")=pic;
+    // var ss = document.getElementById("image").getAttribute('src');
+
+ }
+</script>
+
+    
+</body>
+</html>

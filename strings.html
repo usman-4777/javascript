@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>strings</title>
+</head>
+<body>
+    <!-- <h1>strings</h1> -->
+    <input type="text" id="input1" placeholder="plz insert value">
+    <button type="button" onclick="add()">Add</button>
+    <p id="d1"></p>
+
+    <P id="s2"></P>
+    <p id="s3"></p>
+    <p id="s4"></p>
+
+
+    <script>
+        function add(){
+          var a =  document.getElementById('input1').value;
+
+        //   var a =  new b;
+            document.getElementById('d1').innerHTML += a + "<br>";
+          var a =  document.getElementById('input1').value="";
+
+            // console.log(a);
+        }
+        document.write('usman ashraf from "kangan pur" ');
+        let t1 = 'asdfjksdfggghjhkhgfdsdstryu';
+        let tl = t1.length;
+        document.write('<br>');
+        document.write(tl);
+        document.write('<br>');
+
+
+        let a1 = new String('nodesol education ');
+        let a2 = new String('nodesol education');
+        document.write(a1 == a2);
+        document.write('<br>');
+        document.write('<br>');
+     
+document.write('<h2>Strings Method </h2>');
+document.write('<h3>upper case  </h3>');
+
+let as = 'simple life is the best way ';
+let ft = as.toLocaleUpperCase();
+document.write(ft);
+
+document.write('<h3>lower case  </h3>');
+let aq = 'LIFE IS NOT EASY AS SEE FROM YARDS';
+let az = aq.toLowerCase();
+document.write(az); 
+
+document.write('<h3> Trim string Method  </h3>');
+let aqa = '           LIFE IS NOT EASY AS SEE FROM YARDS';
+let aza = aqa.trim();
+document.write(aza);
+console.log(aza); 
+document.write('<h3> TrimStart string Method  </h3>');
+
+const greeting = '   Hello world!   ';
+
+console.log(greeting);
+// Expected output: "   Hello world!   ";
+
+console.log(greeting.trimStart());  
+// Expected output: "Hello world!   ";
+
+document.write('<h3> TrimEnd string Method  </h3>');
+
+const greetings = '   Hello world!           ';
+
+console.log(greetings);
+// Expected output: "   Hello world!   ";
+
+document.write(greetings.trimEnd());  
+document.write('<h3> slice string Method  </h3>');
+
+//    
+let text = "Hello NODESOL CORP !";
+let result = text.slice(0, 14);
+
+document.getElementById("s2").innerHTML = result;
+document.write('<h3> split string Method  </h3>');
+let us = 'usman ashraf from kangan pur';
+const myarray = us.split("");
+document.getElementById('s3').innerHTML = myarray;
+// console.log(myarray);
+document.write('<h3> substring string Method  </h3>');
+let sha = 'sarder shakeel is full stack emerging developer';
+let keel = sha.substring(0,18);
+document.getElementById('s4').innerHTML = keel ;
+// console.log(keel);   
+
+
+
+    </script>
+</body>
+</html>

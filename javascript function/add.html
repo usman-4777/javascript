@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    first:<input type="text" id="fname" > <br><br>
+      lasr:<input type="text" id = sname><br><br>
+      <button type="button" onclick="usman()">add</button>
+        <p id="demo-1"></p>
+        <h2 style="text-align: center;">Push and Pop</h2>
+    <div style="background-color: blue; width: 400px; margin: auto;">
+        <input type="number" id="sf" placeholder="enter number" style="height: 50px ;color:green;">
+        <button onclick="add()">add number</button>
+        <button onclick="del()">delete number</button>
+        <p id="output"></p>
+    </div>
+
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <br>
+    name: <input type="text" id="fz"> 
+    <button type="button" onclick="sf()">add name</button>
+<p id="z1"></p>
+
+      <script>
+         function usman() {
+          var name = document.getElementById("fname").value;
+          var s_name = document.getElementById("sname").value;
+          if(!name) {
+            alert('please enter name')
+            return
+          }
+          if(!s_name    ) {
+            alert('please enter s_name')
+            return
+          }
+          document.getElementById('demo-1').innerHTML = name  + "<br>" + s_name;
+          document.getElementById('fname').value = "";
+          document.getElementById('s_name').value = "";
+        }
+      document.write("<br>");
+
+      // new adding 
+      function sf(){
+        var n = document.getElementById('fz').value;
+        if(!n){
+          alert('please enter the n')
+          return
+        }
+        document.getElementById('z1').innerHTML = n;
+        document.getElementById('fz').value = "";
+      }
+        
+
+      //end of adding
+let ab = [];
+        function add(){
+        var n1= Number(document.getElementById("sf").value);
+         ab.push(n1);
+        document.getElementById("output").innerHTML = ab
+    }
+    function del(){
+        var n1= Number(document.getElementById("sf").value);
+         ab.pop(n1);
+        document.getElementById("output").innerHTML = ab
+    }
+
+    function shift(){
+        var n1= Number(document.getElementById("demo5").value);
+         ab.shift(n1);
+        document.getElementById("output").innerHTML = ab;
+    }
+
+
+      </script>
+</body>
+</html>

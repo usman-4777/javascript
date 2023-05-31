@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>invice system</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-4">
+          <div class="h2">invoice system</div>
+          <form onsubmit="genrate_invoice()">
+            <div class="form-group mt-3">
+              <label for="">Customer Name:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="customer_name"
+                placeholder="Customer Name"
+              />
+            </div>
+            <div class="form-group mt-3">
+              <label for="">Phone Number:</label>
+              <input
+                type="number"
+                class="form-control"
+                id="phone_number"
+                placeholder="Phone Number"
+              />
+            </div>
+            <div class="form-group mt-3">
+              <label for="">Description:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="description"
+                placeholder="Description"
+              />
+            </div>
+            <div class="form-group mt-3">
+              <label for="">Price:</label>
+              <input
+                type="number"
+                class="form-control"
+                id="price"
+                placeholder="Price"
+              />
+            </div>
+            <label for="">Discount Type:</label>
+            <select
+              id="discount_type"
+              class="form-select mt-3"
+              aria-label="Default select example"
+            >
+              <option selected disabled>Please Select Discount Type</option>
+              <option value="Flat">Flat</option>
+              <option value="Percentage">Percentage</option>
+              <option value="No Discount">No Discount</option>
+            </select>
+            <div class="form-group mt-3">
+                <label for="">Discount:</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="discount"
+                  placeholder="discount"
+                />
+              </div>
+            <div class="form-group mt-3">
+              <label for="">Amount:</label>
+              <input
+                type="number"
+                class="form-control"
+                id="amount"
+                placeholder="Amount"
+              />
+            </div>
+            <div class="mt-3">
+              <button
+                onclick="genrate_invoice()"
+                type="button"
+                class="btn btn-danger"
+              >
+                Genrate invoice
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="col-4">
+          <div id="output"></div>
+        </div>
+      </div>
+
+      <div class="pt-5">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Customer Name</th>
+              <th scope="col">Phone</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody id="invoices_data">
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- javaScript -->
+    <script>
+      let invoices = getStorageData('invoices') ?? [];
+
+      window.onload = () => {
+        showTableData();
+      }
+      
+      function genrate_invoice() {
+        let customer_order = {
+          description: getValue("description"),
+          price: getValue("price"),
+          discount_type: getValue("discount_type"),
+          amount: getValue("amount"),
+          discount: getValue('discount'),
+          cal_discount: calculateDiscount(getValue('discount'), getValue('discount_type'), getValue('price')),
+        };
+
+        let index = invoices.findIndex(
+          (item) =>
+            item.customer_name == getValue("customer_name") &&
+            item.phone_number == getValue("phone_number")
+        );
+        if (index !== -1) {
+          invoices[index].orders.push(customer_order);
+          setData('invoices', invoices);
+        } else {
+          let customer = {
+            customer_name: getValue("customer_name"),
+            phone_number: getValue("phone_number"),
+            orders: [],
+          };
+          
+          customer.orders.push(customer_order);
+          invoices.push(customer);
+          setData('invoices', invoices);
+        }
+        
+        showTableData();
+      }
+
+      function showTableData() {
+        let html = '';
+
+        invoices.forEach((item, index) => {
+            html += `
+                <tr>
+                    <th scope="row">${index + 1}</th>
+                    <td>${item.customer_name}</td>
+                    <td>${item.phone_number}</td>
+                    <td><button class="btn btn-primary" onclick="seeDetail(${index})" >See Detail</button></td>
+                </tr> 
+            `; 
+        })
+        document.getElementById('invoices_data').innerHTML = html;
+      }
+
+      function resetForm() {
+        document.getElementById("customer_name").value = "";
+        document.getElementById("phone_number").value = "";
+        document.getElementById("description").value = "";
+        document.getElementById("price").value = "";
+        document.getElementById("discount").value = "";
+        document.getElementById("amount").value = "";
+      }
+
+      function getValue(id) {
+        return document.getElementById(id).value;
+      }
+
+      function setData(variable, data) {
+        return localStorage.setItem(variable, JSON.stringify(data));
+      }
+
+      function getStorageData(variable) {
+        return JSON.parse(localStorage.getItem(variable));
+      }
+
+      function calculateDiscount(discount, type, price) {
+        if(type == 'Flat') {
+            return parseInt(price) - parseInt(discount);
+        } else if(type == 'Percentage') {
+            return ((parseInt(price) / parseInt(discount)) * 100);
+        } else {
+            return price;
+        }
+      }
+
+      function seeDetail(props) {
+        window.location.href = 'print_bill.html?id=' + props;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Javascript Practice</title>
+</head>
+<body>
+   fname: <input type="text" id="fname">
+   <button type="button" onclick="myfun() ">add name</button>
+    <p id="saim"></p>
+
+    <script>
+function myfun(){
+    var name = document.getElementById('fname').value;
+    if(!name){
+        alert('please enter the name')
+        return
+    }
+    document.getElementById('saim').innerHTML = name ;
+    // document.getElementById('fname').value="";
+    
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+2022/12/22-00:05:02.923 1ed6 Reusing MANIFEST /home/usman/snap/postman/184/.config/Postman/Partitions/2df0f1ed-f208-42ab-83bd-6eac2d426151/Local Storage/leveldb/MANIFEST-000001
+2022/12/22-00:05:02.924 1ed6 Recovering log #43
+2022/12/22-00:05:02.926 1ed6 Reusing old log /home/usman/snap/postman/184/.config/Postman/Partitions/2df0f1ed-f208-42ab-83bd-6eac2d426151/Local Storage/leveldb/000043.log 
+2022/12/22-14:48:16.408 20dd Level-0 table #47: started
+2022/12/22-14:48:16.429 20dd Level-0 table #47: 22396 bytes OK
+2022/12/22-14:48:16.432 20dd Delete type=0 #43

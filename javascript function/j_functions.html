@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript functions</title>
+</head>
+
+    <p id="demo1"> function</p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <br>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+<p id="dis"></p>
+<p id="dish"></p>
+<button onclick="myFunction">touch me</button>
+<p id="a14"></p>
+
+
+<div>
+   
+   <form>
+      <label for="fname">First name:</label><br>
+      <input type="text" id="fname" name="fname"><br>
+      
+    </form>
+</div>
+
+
+
+
+
+    <script>
+        function prct(a1,a2,a3){
+                return a1 + a2 * a3 ;
+        }
+        document.getElementById("demo1").innerHTML = prct(5,5,10);
+        function ptcl(c1,c2,c3,c4) {
+            return c1+c2+c3+c4
+        }
+        document.getElementById("demo2").innerHTML = ptcl(10,10,10,10) ;
+        function tough(b,b1){
+            return b-b1 ;
+        }
+        document.getElementById("demo3").innerHTML = tough(100,20) ;
+
+
+      var x = Mons(12,6)
+      document.getElementById("demo4").innerHTML = x
+      function Mons(d,f ){
+        return d * f ;
+        }
+         var u = Concive(50,50)
+         document.getElementById("demo5").innerHTML = u
+         function Concive(g,h){
+            return g * h ;
+         }
+
+         var sf = vectore(2100,4000,100)
+         document.getElementById('demo6').innerHTML = sf
+         function vectore(a4,a5,a6){
+            return a4 + a5 * a6 ;
+         }
+
+         function toCelious(f){
+            return(5/9) *(f-32);
+         }
+         document.getElementById("demo7").innerHTML = toCelious(90);
+
+         var df = depth(30,20,10,40)
+         document.getElementById("demo8").innerHTML = df
+         function depth(z1,z2,z3,z4){
+            return z1 * z2 + z3 + z4 ;
+         }
+         // OBJECTS IN JAVASCRIPT
+         //Example no 1
+         const person ={fname:"Usman",lname:"Ashraf",age:25};
+         document.getElementById("demo9").innerHTML= 
+         person.fname + "  " + person.lname;
+         //Example no 2
+         const mobile = {mname: "oppo",mmodel:"f5", mcolor:"black" };
+         document.getElementById
+         document.write("<br>");
+         function usman(){
+            document.write("hi mts usman");
+         }
+
+            usman(); 
+         document.write("<br>");
+            
+            function jogrd(){
+               document.write("not anything ; is not possible,with the hardwork");
+            }
+
+            jogrd();
+         document.write("<br>");
+            function sum1(a,b){
+               document.write(a+b);
+            }
+            sum1(40,20);
+         document.write("<br>");
+
+            function sum2(same1,same2,sum3){
+               var u = same1 +same2  +sum3;
+               return u ;
+            }
+            function percentage(tt){
+               var per = tt/300 *10 ;
+               document.write(per);
+            }
+
+            var total = sum2(80,80,80);
+            document.write(total);
+            percentage(total);
+
+            document.write("<br>");
+
+
+            
+         
+    </script>
+    <script>
+      function myFunction(p1, p2) {
+        return p1 * p2;
+      }
+      document.getElementById("dish").innerHTML = myFunction(51, 13);
+
+      function myLq(ps, pb){
+               return ps * pb;
+               }
+               document.getElementById("dis").innerHTML = myLq(41, 10);
+
+
+               const fruits = ["Banana", "Orange", "Apple"];
+      document.getElementById("a14").innerHTML = fruits;
+
+      function myFunction() {
+        fruits.push("Lemon");
+      }
+               
+         
+      </script>
+      document.write('<br>');
+      <h2>date fun</h2>
+      <button onclick="document.getElementById('defc'),innerHTML=Date()">click and check</button>
+      <P id="defc"></P>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js_Arrays</title>
+</head>
+<body>
+    <!-- <input type="text" id="input"> <button onclick="addData()">submit</button> 
+    <p id="demo"></p> -->
+    <h1>start javascript</h1>
+<input type="text" id="input2">
+<button onclick="addFun()"> form submition </button>
+<button onclick="del()"> delete </button>
+
+<p id="demo2"></p>
+ <script>
+    // window.onload = () => {
+    //     showData();
+    // }
+//     let data= [];
+//     function addData() {
+//         let value = document.getElementById('input').value;
+//         data.push(value);
+//         showData();
+//     }
+
+//     function showData() {
+//         let demo = document.getElementById('demo');
+//         demo.textContent = '';
+//         data.forEach((item) => {
+//             demo.innerHTML += item + '<br>';
+//         });
+//     }
+// second input start here
+window.onload = () =>{
+    showData();
+}    
+let d = [];
+function addFun(){
+let value = document.getElementById('input2').value;
+d.push(value);
+showData();
+}
+
+function showData(){
+    let di = document.getElementById('demo2');
+    di.textContent = '';
+    d.forEach((abc) => {
+        di.innerHTML += abc + '<br>';
+    });
+}
+function del(){
+    let dal = document.getElementById('demo2');
+    del.filter(value); 
+}
+ </script> 
+ 
+
+</body>
+</html>

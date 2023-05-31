@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<style>
+    .heading{
+        background-color: blue;
+        width: 247px;
+        height: 50px;
+        text-align: left;
+    }
+    .bw1{
+        height: 50px;
+        width: 60px;
+    }
+    .bw11{
+        height: 100px;
+        width: 60px;
+        background-color: blue;
+    }
+</style>
+<body>
+    <h1 id="found" class="heading "></h1>
+    <table>
+        <tr>
+            <td >
+                <button onclick="reload()"  class="bg-light border-0 btn bw1 bg-danger"  >Ac</button>
+            </td>
+            <td>
+                <button class="bg-light border-0 btn bw1" >BS</button>
+            </td>
+            <td>
+                <button class="bg-light border-0 btn bw1" >÷</button>
+            </td>
+            <td>
+                <button class="bg-light border-0 btn bw1" >x</button>
+            </td>
+        </tr>
+        <tr>
+            <td >
+                <button onclick="insput1()" class="bg-light border-0 btn bw1" >1</button>
+            </td>
+            <td>
+                <button onclick="insput2()" class="bg-light border-0 btn bw1" >2</button>
+            </td>
+            <td>
+                <button onclick="insput3()" class="bg-light border-0 btn bw1" >3</button>
+            </td>
+            <td>
+                <button onclick="insput4()" class="bg-light border-0 btn bw1" >-</button>
+            </td>
+        </tr>
+        <tr>
+            <td >
+                <button onclick="insput5()" class="bg-light border-0 btn bw1" >4</button>
+            </td>
+            <td>
+                <button onclick="insput6()" class="bg-light border-0 btn bw1" >5</button>
+            </td>
+            <td>
+                <button onclick="insput7()" class="bg-light border-0 btn bw1" >6</button>
+            </td>
+            <td>
+                <button onclick="insput8()" class="bg-light border-0 btn bw1" >+</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="insput9()" class="bg-light border-0 btn bw1" >7</button>
+            </td>
+            <td>
+                <button onclick="insput10()" class="bg-light border-0 btn bw1" >8</button>
+            </td>
+            <td>
+               <button onclick="insput11()" class="bg-light border-0 btn bw1" >9</button>
+            </td>
+            <td rowspan="2">
+                <button onclick="insput12()" class="bg-light border-0  bw11" >=</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="insput13()" class="bg-light border-0 btn bw1" >%</button>
+            </td>
+            <td>
+                <button onclick="insput14()" class="bg-light border-0 btn bw1" >0</button>
+            </td>
+            <td>
+               <button onclick="insput15()" class="bg-light border-0 btn bw1" >.</button>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        function reload() {
+            document.getElementById("found").innerHTML = "";
+        }
+        function insput1() {
+            document.getElementById("found").innerHTML += "1";
+        }
+        function insput2() {
+            document.getElementById("found").innerHTML += "2";
+        }
+        function insput3() {
+            document.getElementById("found").innerHTML += "3";
+        }
+        function insput4() {
+            var a = "found" - "found";
+            document.getElementById("found").innerHTML +=  a;
+        }
+        function insput5() {
+            document.getElementById("found").innerHTML += "4";
+        }
+        function insput6() {
+            document.getElementById("found").innerHTML += "5";
+        }
+        function insput7() {
+            document.getElementById("found").innerHTML += "6";
+        }
+        function insput8() {
+            document.getElementById("found").innerHTML += "+";
+        }
+        function insput9() {
+            document.getElementById("found").innerHTML += "7";
+        }
+        function insput10() {
+            document.getElementById("found").innerHTML += "8";
+        }
+        function insput11() {
+            document.getElementById("found").innerHTML += "9";
+        }
+        function insput12() {  
+            document.getElementById("found").innerHTML = b;
+        }
+        function insput13() {
+            document.getElementById("found").innerHTML += "%";
+        }
+        function insput14() {
+            document.getElementById("found").innerHTML += "0";
+        }
+        function insput15() {
+            document.getElementById("found").innerHTML += ".";
+        }
+        let firstNum = "";
+        let secondNum = "";
+        let operator;
+
+        function calculator(firstNum, secondNum, operator) {
+        operators.forEach(operator => {
+        operator.addEventListener("click", (e) => {
+            firstNum = displayValue;
+            console.log(firstNum);
+            operator = e.target.innerText;
+            console.log(operator);
+        })
+    })
+}
+
+
+calculator();
+
+    </script>
+</body>
+</html>
